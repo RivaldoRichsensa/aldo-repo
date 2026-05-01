@@ -2,37 +2,28 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/RivaldoRichsensa/aldo-repo.git'
+                git 'https://github.com/RivaldoRichsensa/Implementasi-Continuous-Integration-CI.git'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Building...'
+                echo 'Build proses berjalan...'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Testing...'
+                echo 'Testing proses berjalan...'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
+                echo 'Deploy simulasi berhasil...'
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'Pipeline sukses!'
-        }
-        failure {
-            echo 'Pipeline gagal!'
         }
     }
 }
