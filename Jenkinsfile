@@ -2,27 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
-            steps {
-                git 'https://github.com/RivaldoRichsensa/Implementasi-Continuous-Integration-CI.git'
-            }
-        }
-
         stage('Build') {
             steps {
-                echo 'Build proses berjalan...'
+                echo 'Build berhasil'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Testing proses berjalan...'
+                echo 'Testing berhasil'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploy simulasi berhasil...'
+                echo 'Deploy berhasil'
             }
         }
     }
